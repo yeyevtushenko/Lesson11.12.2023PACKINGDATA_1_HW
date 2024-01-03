@@ -18,6 +18,14 @@ def search(capitals, country):
     else:
         print(f"Країна {country} не знайдена")
 
+def edit(capitals, country, new_capital):
+    if country in capitals:
+        capitals[country] = new_capital
+        print(f"Змінено: {country} - {new_capital}")
+    else:
+        print(f"Країна {country} не знайдена")
+
+
 
 
 
