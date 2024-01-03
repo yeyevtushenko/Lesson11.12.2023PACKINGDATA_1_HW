@@ -25,6 +25,24 @@ def edit(capitals, country, new_capital):
     else:
         print(f"Країна {country} не знайдена")
 
+def save(capitals, filename):
+    with gzip.open(filename, 'wt', encoding='utf-8') as file:
+        json.dump(capitals, file)
+        print(f"Дані збережено у файлі: {filename}")
+
+def load(filename):
+    try:
+        with gzip.open(filename, 'rt', encoding='utf-8') as file:
+            capitals = json.load(file)
+            print(f"Дані завантажено з файлу: {filename}")
+            return capitals
+    except FileNotFoundError:
+        print(f"Файл {filename} не знайдено. Створено новий порожній словник.")
+        return {}
+
+
+
+
 
 
 
