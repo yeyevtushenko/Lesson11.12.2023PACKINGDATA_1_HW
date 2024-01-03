@@ -12,6 +12,14 @@ def remove(capitals, country):
     else:
         print(f"Країна {country} не знайдена")
 
+def search(capitals, country):
+    if country in capitals:
+        print(f"Столиця {country}: {capitals[country]}")
+    else:
+        print(f"Країна {country} не знайдена")
+
+
+
 
 
 
